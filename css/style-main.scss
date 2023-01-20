@@ -1,0 +1,455 @@
+$color-main: #351F21;
+$color-second: #fff;
+$color-bg: #A9BFE4;
+$color-bg-light:rgba(169, 191, 228, 0.2);
+$color-buttons: #FFC2C7;
+$color-names: #989EC3;
+$color-forms: #ACACAC;
+$font-second: 'Source Sans Pro', sans-serif;
+
+html{
+    box-sizing:border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lora', serif;
+    color: $color-main;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    width: 130px;
+    height: 30px;
+    border-radius: 50px;
+    border: 2px solid $color-buttons;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+.button-fill{
+    background: $color-buttons;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: $color-second;
+}
+
+.button-transparent {
+    color: $color-names;
+    background: $color-second;
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 65px;
+    // background-color: #989EC3;
+}
+
+
+.header {
+    height: 70px;
+    background: $color-bg;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 57.5px;
+
+    .logo {
+        width: 136.48px;
+        height: 55px;
+        margin: 8px 0;
+    }
+
+    .menu {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 333px;
+        gap: 17px;
+        color: $color-second;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    .buttons-menu {
+        display: flex;
+        gap: 15px;
+    }
+
+}
+
+.top {
+    background-image: url("../img/bg-top.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    min-width: 100%;
+    // height: calc(100vh - 70px);
+
+    .presentation {
+        height: 445px;
+        padding-top: 160px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+
+        .title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 31px; 
+        }
+
+        .descr {
+            font-family: $font-second;
+            font-size: 14px;
+            line-height: 18px;
+            padding-top: 15px;
+        }
+
+        .buttons-top{
+            margin-top: 20px;
+            display: flex;
+            gap: 22px;
+        }
+    }
+}
+
+.about {
+    margin-top: 10px;
+    // background-image: url("../img/women+.png");
+    // background-repeat: no-repeat;
+    // background-position: 105% 189%;
+    // background-size: 30%;
+
+    .flowers {
+        display: flex;
+        margin-bottom: 45px;
+    }
+
+    .flower__item {
+        width: 210px;
+        height: 145px;
+        position: relative;
+
+        img {
+            width: 210px;
+            height: 145px;
+        }
+        
+        .button-blue{
+            position: absolute;
+            right: 40px;
+            bottom: 7px;
+            border-radius: 0;
+            border: none;
+            background: $color-bg;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            color: $color-second;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    .about__text {
+        max-width: 315px;
+        position: relative;
+        z-index: 1;
+
+        .about-title {
+            font-size: 24px;
+            line-height: 31px;
+            padding-bottom: 18px;
+        }
+
+        .about-text-1 {
+            padding-left: 15px;
+            padding-bottom: 8px;
+        }
+
+        .about-text-2 {
+            padding-left: 15px;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+.work-for {
+    position: relative;
+    background-color: $color-bg-light;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        height: 320px;
+        width: 380px;
+
+        background-image: url("../img/women+.png");
+        background-repeat: no-repeat;
+        top:-122%;
+        right: 0;
+        background-size: 120%;
+        // z-index: 2;
+    }
+
+    .title {
+        padding-top: 7px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-names;
+    }
+
+    .work-for__inner {
+        height: 155px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 95px;
+    }
+
+}
+
+.catalog {
+    height: 864px;
+
+    .title {
+        padding-top: 47px;
+        font-size: 24px;
+        line-height: 31px;
+        padding-bottom: 30px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px 15px;
+        padding-bottom: 10px;
+    }
+
+    &__item {
+        width: 200px;
+        height: 330px;
+        box-shadow: 0px 4px 8px #FFC2C7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            padding-bottom: 8px;
+        }
+
+        .card__text {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+
+        p {
+            padding-bottom: 9px;
+            align-self: center;
+        }
+
+        span {
+            padding-bottom: 10px;
+        }
+    }
+
+    .slider {
+        width: 176px;
+        height: 50px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        gap: 6px;
+        // padding-bottom: 20px;
+
+        .circle img {
+            padding-bottom: 3px;
+        }
+    }
+}
+
+.comments {
+    height: 690px;
+    position: relative;
+    background-color: $color-bg-light;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 155px;
+        height: 200px;
+        right: 0;
+        top: -6%;
+        background-image: url("../img/flowers-right.png");
+        background-repeat: no-repeat;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 195px;
+        height: 250px;
+        left: 0%;
+        top: 40%;
+        background-image: url("../img/flowers-left.png");
+        background-repeat: no-repeat;
+    }
+
+    .comments-title {
+        font-size: 24px;
+        line-height: 31px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .comments__inner {
+        display: flex;
+        flex-direction: column;
+
+        .comment-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            margin-right: 45px;
+        }
+
+        .comment-1 {
+            margin-bottom: 45px;
+        }
+
+        .comment-2 {
+            margin-left: 150px;
+        }
+    }
+
+    .comment-1, .comment-2 {
+        display: flex;
+        font-family: 'Source Sans Pro';
+
+        .description {
+            max-width: 335px;
+            margin-bottom: 7px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .sign {
+            // margin-top: 5px;
+            padding-bottom: 5px;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 16px;
+            color: $color-names;
+        }
+    }
+
+    .slider {
+        width: 176px;
+        height: 50px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        gap: 6px;
+
+        .circle img {
+            padding-bottom: 3px;
+        }
+    }
+
+    .add__comment {
+        display: flex;
+        flex-direction: column;
+
+        .add-title {
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 15px;
+        }
+
+        input {
+            border: none;
+            padding-right: 12px;
+            color: $color-forms;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        .user-name {
+            height: 30px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+        }
+
+        .message-text {
+            height: 95px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 740px) {
+    
+    .flowers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav .menu {
+        display: none;
+    }
+
+    .about .flower__item {
+        width: 60%;
+        height: 100%;
+        position: relative;
+
+        img {
+        height: 150%;
+        }
+    }
+}
